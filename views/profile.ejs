@@ -26,8 +26,9 @@
 				</div>
 	
 				<div class="col-7 col-md-6">
-					<form action="search-results.html" method="GET" class="search-form">
-						<input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
+					<form action="" method="GET" class="search-form">
+						<input type="text" name="search" placeholder="Buscar productos, marcas y más"
+							class="search-form_input">
 						<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
 					</form>
 				</div>
@@ -47,11 +48,11 @@
 			<nav class="main-navbar">
 				<ul class="left-navbar">
 					<li><a href="index.html">Todos los productos</a></li>
-					<!-- solo logueado <li><a href="">Cargar productos</a></li> -->
+					<li><a href="product-add.html">Cargar productos</a></li>
 				</ul>
 	
 				<ul class="right-navbar">
-					<!-- Solo logueado <li><a href="profile.html">
+					<li><a href="profile.html">
 							Nombre del usuario <i class="fas fa-user"></i>
 						</a>
 					</li>
@@ -61,33 +62,54 @@
 								Cerrar sesión <i class="fas fa-sign-in-alt"></i>
 							</button>
 						</form>
-					</li> -->
-					<li>
-						<a href="register.html">Creá tu cuenta <i class="far fa-address-card"></i>
-						</a>
 					</li>
-					<li>
-						<a href="login.html">Ingresá <i class="fas fa-sign-in-alt"></i></a>
-					</li>
+					<!-- Solo deslogueado <li>
+							<a href="register.html">Creá tu cuenta <i class="far fa-address-card"></i>
+							</a>
+						</li>
+						<li>
+							<a href="login.html">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+						</li> -->
 				</ul>
 			</nav>
 		</div>
 	</header>
 	<!-- /Header -->
-	
-	<!-- Banner -->
-	<div class="banner">
-		<img src="images/img-home-banner.jpg" alt="Banner de ofertas">
-	</div>
-	<!-- /Banner -->
 
-	<!-- Novedades -->
+	<!-- Datos del usuario -->
+	<section class="info-usuario container products-wrapper">
+		<div class="row">
+			<div class="img-container offset-3 col-2">
+				<img src="https://via.placeholder.com/150" alt="foto de perfil" class="foto-perfil">
+			</div>
+			<div class="data-container col-6">
+				<div class="d-flex align-items-center ">
+					<h1 class="main-title">Nombre del usuario 
+						<a href="profile-edit.html">
+							<i class="fas fa-cog"></i>
+						</a>
+					</h1>
+					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
+				</div>
+				<div>
+					<ul class="">
+						<li>8 productos</li>
+						<li>200 seguidores</li>
+						<li>300 comentarios</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /Datos del usuario -->
+
+	<!-- Mis productos -->
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Novedades</h2>
+				<h2 class="products-title">Mis productos</h2>
 			</div>
-			<!-- Show the "ultimos" products -->
+			<!-- Show mis productos -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 					<a href="product.html">
@@ -147,16 +169,6 @@
 					</a>
 				</section>
 			</div>
-		</div>
-	</div>
-	<!-- /Novedades -->
-	<!-- Más comentados -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Más comentados</h2>
-			</div>
-			<!-- Show the "ultimos" products -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 					<a href="product.html">
@@ -165,7 +177,8 @@
 						</figure>
 						<article class="product-box_data">
 							<h2>Nombre del producto</h2>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+								delectus ex</p>
 							<p>Comentarios: 12</p>
 						</article>
 					</a>
@@ -179,7 +192,8 @@
 						</figure>
 						<article class="product-box_data">
 							<h2>Nombre del producto</h2>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+								delectus ex</p>
 							<p>Comentarios: 12</p>
 						</article>
 					</a>
@@ -193,7 +207,8 @@
 						</figure>
 						<article class="product-box_data">
 							<h2>Nombre del producto</h2>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+								delectus ex</p>
 							<p>Comentarios: 12</p>
 						</article>
 					</a>
@@ -207,7 +222,8 @@
 						</figure>
 						<article class="product-box_data">
 							<h2>Nombre del producto</h2>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
+							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+								delectus ex</p>
 							<p>Comentarios: 12</p>
 						</article>
 					</a>
@@ -215,7 +231,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- /Más comentados -->
+	<!-- /Mis productos -->
 
 
 	<!-- footer -->
