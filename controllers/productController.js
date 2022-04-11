@@ -1,3 +1,5 @@
+let usuarios = require("../db/usuarios");
+
 let productController = {
     index: function(req,res) {
       return res.render('product')
