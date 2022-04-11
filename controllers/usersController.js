@@ -9,7 +9,7 @@ let usersController = {
         return res.render('login')
     },
     profile: function (req,res) {
-        return res.render('profile', {usuarios: usuarios.nombre, imagen: usuarios.imagen, productos: usuarios.productos, seguidores: usuarios.seguidores, comentarios: usuarios.comentarios})
+        return res.render('profile', {usuarios: usuarios[0].nombre, imagen: usuarios[0].imagen, productos: usuarios[0].productos, seguidores: usuarios[0].seguidores, comentarios: usuarios[0].comentarios})
     },
     profileEdit: function (req,res) {
         return res.render('profile-edit')
