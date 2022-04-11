@@ -3,7 +3,7 @@ let productController = {
       return res.render('product')
     },
     add: function(req,res) {
-        return res.render('product-add')
+        return res.render('product-add', {usuarios: usuarios[0].nombre})
     }
   }
   
