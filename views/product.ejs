@@ -30,28 +30,22 @@
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<article>
-							<img src="https://via.placeholder.com/35" alt="Foto de Izquierdoz">
-							<div class="data">
-								<p class="user">
-								<strong> <a href="/users/profile"><%= comentarios[0].usuario %> </a> </strong>
-								<%= comentarios[0].texto %></p>
-							</div>
-						</article>
-						<article>
+						<% for (let i = 0; i < comentarios.length; i++) { %>
+							<article>
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="/users/profile"><%= comentarios[1].usuario %> </a> </strong>
-									<%= comentarios[1].texto %></p>
+								<strong> <a href="/users/profile"><%= comentarios[i].usuario %> </a> </strong>
+								<%= comentarios[i].texto %></p>
 							</div>
 						</article>
-						<article>
+						<% } %>
+						
+						<!-- <article>
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="/users/profile"><%= comentarios[2].usuario %> </a> </strong>
-									<%= comentarios[2].texto %>
+									<strong> <a href="/users/profile"> </a> </strong>
 									</p>
 							</div>
 						</article>
@@ -59,18 +53,27 @@
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="/users/profile"><%= comentarios[3].usuario %> </a> </strong>
-									<%= comentarios[3].texto %></p>
+									<strong> <a href="/users/profile"> </a> </strong>
+									
+									</p>
 							</div>
 						</article>
 						<article>
 							<img src="https://via.placeholder.com/35" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href=""><%= comentarios[4].usuario %> </a> </strong>
-									<%= comentarios[4].texto %></p></p>
+									<strong> <a href="/users/profile"> </a> </strong>
+									</p>
 							</div>
 						</article>
+						<article>
+							<img src="https://via.placeholder.com/35" alt="">
+							<div class="data">
+								<p class="user">
+									<strong> <a href=""></a> </strong>
+									</p></p>
+							</div>
+						</article> -->
 
 					</section>
 					<form class="form" action="" method="POST">

@@ -7,7 +7,7 @@ let comentarios = {
     },
     {
         usuario: 'Leonardo DiCaprio',
-        texto:'These sneakers are incredible. I wore them to the last oscars and was everyone',
+        texto:'These sneakers are incredible. I wore them to the last oscars and was everyone envy',
         foto:'/images/users/leo.jpg'
      },
      {
@@ -16,12 +16,12 @@ let comentarios = {
         foto:'/images/users/bicho.jpg'
      },
      {
-        usuario: 'floyd mayweather',
+        usuario: 'Floyd mayweather',
         texto:'Estas zapatillas son horribles, son muy incomodas. Son de mi talle pero no se terminan de adaptar a mis pies. Las voy a devolver!',
         foto:'/images/users/floyd.jpg'
      },
      {
-        usuario: 'johnny depp',
+        usuario: 'Johnny depp',
         texto:'Hello, what is the price of these shoes? I am thinking of buying them. Please reply me as soon as possible.',
         foto:'/images/users/deep.jpg'
      },
