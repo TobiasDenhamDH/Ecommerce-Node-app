@@ -8,7 +8,7 @@ let productController = {
       return res.render('product', {comentarios: comentarios.lista})
     },
     add: function(req,res) {
-        return res.render('product-add', {usuarios: usuarios[0].nombre})
+        return res.render('product-add', {usuarios: usuarios})
     }}
 
   module.exports = productController;

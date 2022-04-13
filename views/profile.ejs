@@ -20,7 +20,7 @@
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"> <%= usuarios %> 
+					<h1 class="main-title"> <%= usuarios[0].nombre %> 
 						<a href="/users/profileedit">
 							<i class="fas fa-cog"></i>
 						</a>
@@ -29,9 +29,9 @@
 				</div>
 				<div>
 					<ul class="">
-						<li> <%= productos %> </li>
-						<li> <%= seguidores %> </li>
-						<li> <%= comentarios %> </li>
+						<li> <%= usuarios[0].productos %> </li>
+						<li> <%= usuarios[0].seguidores %> </li>
+						<li> <%= usuarios[0].comentarios %> </li>
 					</ul>
 				</div>
 			</div>
