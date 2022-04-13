@@ -74,4 +74,4 @@ let productos = [
 
 ]
 
-module.exports(productos);
+module.exports = productos;
