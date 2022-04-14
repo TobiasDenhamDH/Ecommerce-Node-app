@@ -74,7 +74,9 @@ hr {
 .main-header_home-link,
 .main-header_credit-link {
   display: block;
+  margin-right: 15px;
 }
+
 
 .main-header_credit-link {
   font-size: 1.5em;
