@@ -182,18 +182,27 @@ hr {
   overflow: hidden;
   transition: 300ms;
   margin: 20px 0;
+  
 }
 
 .product-box a {
   display: block;
+  
 }
 
 .product-box_image {
   border-bottom: 1px solid var(--light-gray);
+
+}
+.product-box_image img{
+  display: block;
+  margin: auto;
+  padding: 10px;
+
 }
 
 .product-box_data {
-  padding: 15px;
+  padding: 20px;
   position: relative;
   display: flex;
   align-items: center;
