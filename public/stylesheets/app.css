@@ -268,6 +268,18 @@ hr {
   box-shadow: 0 0 5px var(--green);
 }
 
+/*=======Resultado de búsqueda =======*/
+.product-box_data h3{
+  font-size: 1.8em;
+  color: #666666;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+.product-text p{
+  color:black;
+  font-size: 1.5em;
+}
 /*====== Footer ======*/
 .main-footer {
   background-color: #ffffff;

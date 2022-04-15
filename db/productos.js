@@ -30,7 +30,7 @@ let productos = [
         nombre: "Zapatillas Converse Plataforma " ,
         marca: "Marca: Converse",
         color : "Color: Animal Print" ,
-        talle : "Talle : 40" ,
+        talle : "Talle: 40" ,
         comentario:" Comentarios : 115" ,
     },
     {
