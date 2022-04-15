@@ -316,14 +316,16 @@ hr {
 }
 
 .product-detail-img {
-  width: 70%;
+  width: 80%;
   display: block;
   margin: auto;
+  padding: 5px;
+  background-color: #f5f4f4;
 }
 
 .product-detail-info {
   border-right: 1px solid var(--light-gray);
-  padding: 15px;
+  padding: 10px;
   /* height: 100%; */
 }
 
@@ -333,9 +335,10 @@ hr {
 }
 
 .product-detail-description {
-  padding: 15px 15px 15px 40px;
+  margin: 17px 50px;
+  padding: 20px 30px 15px 30px;
   font-size: 1.8em;
-  line-height: 1.5;
+  line-height: 0.7;
 }
 
 .product-detail-price {
