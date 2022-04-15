@@ -1,7 +1,7 @@
 let usuarios = [
     
 { nombre: "Felipe Perez",
-  imagen: "/images/users/default-image.png",
+  imagen: "/images/users/feli-perez.jpg",
   productos: "10 productos",
   seguidores: "1345 seguidores",
   comentarios:"660 comentarios"

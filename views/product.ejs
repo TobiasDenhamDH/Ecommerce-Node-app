@@ -14,7 +14,7 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Zapatillas Nike Air Max 270</h2> 
+			<h2 class="products-title-detail">Zapatillas Nike Air Max 270</h2> 
 			<p class="product-detail-description">
 				<a href="/products/add">Editar</a>
 			</p>
@@ -40,7 +40,7 @@
 					<section class="comments">
 						<% for (let i = 0; i < comentarios.length; i++) { %>
 							<article>
-							<img src="/images/products/usuario.jpg" alt="">
+							<img src="<%= comentarios[i].foto %>" alt="">
 							<div class="data">
 								<p class="user">
 								<strong> <a href="/users/profile"><%= comentarios[i].usuario %> </a> </strong>

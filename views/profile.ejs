@@ -16,7 +16,7 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="https://via.placeholder.com/150" alt="foto de perfil" class="foto-perfil">
+				<img src=" <%= usuarios[0].imagen %>" alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
@@ -28,7 +28,7 @@
 					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
 				</div>
 				<div>
-					<ul class="">
+					<ul class="datos">
 						<li> <%= usuarios[0].productos %> </li>
 						<li> <%= usuarios[0].seguidores %> </li>
 						<li> <%= usuarios[0].comentarios %> </li>
@@ -43,10 +43,10 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Mis productos</h2>
+				<h2 class="products-title">• Mis productos •</h2>
 			</div>
 			<!-- Show mis productos -->
-			<% for (let i=0; i < productos.length ; i ++) { %> 	
+			<% for (let i=4; i < 12 ; i ++) { %> 	
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
 						<a href="/products">
