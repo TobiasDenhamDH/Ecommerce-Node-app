@@ -1,3 +1,4 @@
+const productos = require("../db/productos")
 const usuarios = require("../db/usuarios")
 let data = require("../db/usuarios")
 
@@ -9,7 +10,7 @@ let usersController = {
         return res.render('login')
     },
     profile: function (req,res) {
-        return res.render('profile', {usuarios: usuarios})
+        return res.render('profile', {usuarios: usuarios, productos: productos})
         
     },
     profileEdit: function (req,res) {

@@ -6,7 +6,7 @@ let productos = [
         nombre: "Zapatillas Nike Air Force 1" ,
         marca: "Marca: Nike",
         color : "Color: Blanco" ,
-        talle : "Talle: 41/42" ,
+        talle : "Talle: 42" ,
         comentario:" Comentarios : 12" ,
     },
     {
@@ -14,7 +14,7 @@ let productos = [
         nombre: "Zapatillas Nike Air Force 1 Boots" ,
         marca: "Marca: Nike",
         color : "Color: Blanco" ,
-        talle : "Talle: 39/40" ,
+        talle : "Talle: 39 ",
         comentario:" Comentarios : 120" ,
     },
     {
@@ -22,7 +22,7 @@ let productos = [
         nombre: "Zapatillas Nike Air Max 270" ,
         marca : "Marca: Nike",
         color : "Color: Rosa" ,
-        talle : "Talle: 37/38" ,
+        talle : "Talle: 38" ,
         comentario:" Comentarios : 520" ,
     },
     {
@@ -30,7 +30,7 @@ let productos = [
         nombre: "Zapatillas Converse Plataforma " ,
         marca: "Marca: Converse",
         color : "Color: Animal Print" ,
-        talle : "39/40" ,
+        talle : "Talle : 40" ,
         comentario:" Comentarios : 115" ,
     },
     {
@@ -38,7 +38,7 @@ let productos = [
         nombre: "Zapatillas Adidas Forum Bold" ,
         marca : "Marca: Adidas",
         color : "Color: Blanco y azul" ,
-        talle : "41/42" ,
+        talle : "41" ,
         comentario:" Comentarios : 13" ,
     },
     {
@@ -46,7 +46,7 @@ let productos = [
         nombre: "Zapatillas Nike Air Jordan 1" ,
         marca: "Marca: Nike",
         color : "Color: Negro" ,
-        talle : "Talle: 41/42" ,
+        talle : "Talle: 42" ,
         comentario:" Comentarios : 48" ,
     },
     {
@@ -54,7 +54,7 @@ let productos = [
         nombre: "Zapatillas Nike Air Jordan 11" ,
         marca: "Marca: Nike",
         color : "Color: Negro y rojo" ,
-        talle : "Talle: 43/44" ,
+        talle : "Talle: 44" ,
         comentario:" Comentarios : 132" ,
     },
     {
@@ -62,7 +62,7 @@ let productos = [
         nombre: "Zapatillas Puma RS- Fast" ,
         marca: "Marca: Puma",
         color : "Color: Blanco y rojo" ,
-        talle : "Talle: 41/42" ,
+        talle : "Talle: 41" ,
         comentario:" Comentarios : 1212" ,
     },
     {
@@ -70,7 +70,7 @@ let productos = [
         nombre: "Zapatillas Adidas Superstar" ,
         marca: "Marca: Adidas",
         color : "Color: Blanco y lila" ,
-        talle : "Talle: 35/36" ,
+        talle : "Talle: 35" ,
         comentario:" Comentarios : 112" ,
     },
     {
@@ -78,7 +78,7 @@ let productos = [
         nombre: "Zapatillas Vans Old Skool" ,
         marca: "Marca: Vans",
         color : "Color: Negro" ,
-        talle : "Talle: 41/42" ,
+        talle : "Talle: 42" ,
         comentario:" Comentarios : 512" ,
     },
     {
@@ -86,7 +86,7 @@ let productos = [
         nombre: "Zapatillas Chuck Taylor All Star Move" ,
         marca : "Marca: Converse",
         color : "Color: Blanco" ,
-        talle : "Talle: 39/40" ,
+        talle : "Talle: 39" ,
         comentario:" Comentarios : 712" ,
     },
     {
@@ -94,7 +94,7 @@ let productos = [
         nombre: "Zapatillas Adidas Forum Mid" ,
         marca : "Marca: Adidas",
         color : "Color: Blanco" ,
-        talle : "41/42" ,
+        talle : "41" ,
         comentario:" Comentarios : 130" ,
     },
 ]

@@ -14,7 +14,7 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Zapatillas Nike Air Force 1</h2> 
+			<h2 class="products-title">Zapatillas Nike Air Max 270</h2> 
 			<p class="product-detail-description">
 				<a href="/products/add">Editar</a>
 			</p>
@@ -22,17 +22,25 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="/images/products/air-force.jpg" alt="" class="product-detail-img">
-					<h3 class="product-detail-description"> Zapatillas Nike Air Force 1</p>
-					<p class="product-detail-description"> Marca: Nike</p>
-					<p class="product-detail-description">Color: Blanco</p>
-					<p class="product-detail-description">Talle: 41/42</p>
+					<img src="/images/products/air-max-270.jpg" alt="" class="product-detail-img">
+					<h3 class="product-detail-description"> Zapatillas Nike Air Max 270 </h3>
+						
+					<p class="product-detail-description">
+						Las zapatillas Nike Air Max 270 están inspiradas en dos íconos Air Max, las 180 y 93.
+						Su diseño incorpora en el talón la unidad Air más grande para proporcionarte una pisada
+						 super suave con un tacto tan increíble como su look. Amortiguación y ventilación donde más lo necesitas,
+						  eso te brindan las Air Max 270.</p>
+
+					<p class="product-detail-options"> Marca: Nike</p>
+					<p class="product-detail-options">Color: Rosa</p>
+					<p class="product-detail-options"> Talle: 38 </p> 
+					
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
 						<% for (let i = 0; i < comentarios.length; i++) { %>
 							<article>
-							<img src="https://via.placeholder.com/35" alt="">
+							<img src="/images/products/usuario.jpg" alt="">
 							<div class="data">
 								<p class="user">
 								<strong> <a href="/users/profile"><%= comentarios[i].usuario %> </a> </strong>
@@ -40,40 +48,6 @@
 							</div>
 						</article>
 						<% } %>
-						
-						<!-- <article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/users/profile"> </a> </strong>
-									</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/users/profile"> </a> </strong>
-									
-									</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/users/profile"> </a> </strong>
-									</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href=""></a> </strong>
-									</p></p>
-							</div>
-						</article> -->
 
 					</section>
 					<form class="form" action="" method="POST">

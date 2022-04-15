@@ -335,10 +335,23 @@ hr {
 }
 
 .product-detail-description {
-  margin: 17px 50px;
-  padding: 20px 30px 15px 30px;
+  margin: 15px 50px;
+  padding: 5px 40px 15px 30px;
   font-size: 1.8em;
-  line-height: 0.7;
+  line-height: 1.5;
+}
+.product-detail-options {
+  display: inline-block;
+  border: 1px solid #1E679A;
+  width: 160px;
+  border-radius: 18px;
+  border-color: #666666;
+  margin: 10px 10px 10px 60px;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.6em;
+  line-height: 1.5;
+  
 }
 
 .product-detail-price {
@@ -548,6 +561,9 @@ textarea.form-input {
 .form-register{
   font-size: 15px;
   font-family: var(--base-font-family);
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
   /* display: flex;
   flex-direction: column; */
 }
