@@ -1,14 +1,14 @@
 let express = require('express');
-let usersController = require("../controllers/usersController")
+let userController = require("../controllers/userController")
 let router = express.Router();
 
 /* GET home page. */
-router.get('/', usersController.register);
+router.get('/', userController.register);
 
-router.get('/login', usersController.login);
+router.get('/login', userController.login);
 
-router.get('/profile', usersController.profile);
+router.get('/profile', userController.profile);
 
-router.get('/profileedit', usersController.profileEdit);
+router.get('/profileedit', userController.profileEdit);
 
 module.exports = router;

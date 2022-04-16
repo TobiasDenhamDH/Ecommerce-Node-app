@@ -2,7 +2,7 @@ const productos = require("../db/productos")
 const usuarios = require("../db/usuarios")
 let data = require("../db/usuarios")
 
-let usersController = {
+let userController = {
     register: function(req,res) {
         return res.render('register')
     },
@@ -18,4 +18,4 @@ let usersController = {
     }
   }
   
-  module.exports = usersController;
+  module.exports = userController;
