@@ -23,7 +23,7 @@ let comentarios = {
      {
         usuario: 'Angelina Jolie',
         texto:'Hello, what is the price of these shoes? I am thinking of buying them. Please reply me as soon as possible.',
-        foto:'/images/users/deep.jpg'
+        foto:'/images/users/angelina.jpg'
      },
      {
         usuario: 'Conor McGregor',
