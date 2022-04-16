@@ -8,7 +8,7 @@
   --dark-blue: #03264C;
   --light-blue: #1259c3;
   --gray: #666666;
-  --light-gray: #ebebeb42;
+  --light-gray: #ebebeb;
   --green: #39b54a;
   --base-font-family: 'Roboto', sans-serif
 }
@@ -67,7 +67,7 @@ hr {
 
 /*====== Main Header ======*/
 .main-header {
-  padding: 15px 0;
+  padding: 5px 0;
   background-color: #c8c6c6;
 
 }
