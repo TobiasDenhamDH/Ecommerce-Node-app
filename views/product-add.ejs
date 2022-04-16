@@ -21,37 +21,35 @@
 			<!-- Show the "ultimos" products -->
 			
 			<!-- Formulario para agregar productos al catalogo -->
-	<main class="main-registro">
-		<div class="div-registro">
-			<form class="form-register" action="/" method="get">
-				<div>
-					<label>Imagen:</label>
-					<input type="file" name="imagen" value="" required>
+			<main class="main-registro">
+				<div class="div-registro">
+					<form class="form-register" action="/" method="get">
+						<div>
+							<label>Imagen:</label>
+							<input type="file" name="imagen" value="" required>
+						</div>
+						<div>
+							<label>Nombre del Producto:</label>
+							<input type="text" name="Nombre del Producto" value="" required>
+						</div>
+						<div>
+							<label>Descripcion:</label>
+							<input type="text" name="Descripcion" value="" required>
+						</div>
+						<div>
+							<label>Fecha de carga:</label>
+							<input type="date" name="Fecha de carga" value="" required>
+						</div>
+						<button type="submit">Enviar</button>
+					</form>
 				</div>
-				<div>
-					<label>Nombre del Producto:</label>
-					<input type="text" name="Nombre del Producto" value="" required>
-				</div>
-				<div>
-					<label>Descripcion:</label>
-					<input type="text" name="Descripcion" value="" required>
-				</div>
-				<div>
-					<label>Fecha de carga:</label>
-					<input type="date" name="Fecha de carga" value="" required>
-				</div>
-				<button type="submit">Enviar</button>
-			</form>
-		</div>
-	</main>		
-			<!-- <h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario para agregar prodcutos al catálogo. <br>
-			Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos. <br>
-			Eliminen estás líneas y coloquen el formulario. <br>
-			Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-			////////////////
-			</h2> -->
+			</main>		
+			
 
 
+
+		</div>	
+	 </div>	
 	<!-- footer -->
 	<footer class="main-footer">
 		<%- include('./partials/footer') %> 
