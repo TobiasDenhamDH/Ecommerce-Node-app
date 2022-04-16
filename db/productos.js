@@ -2,6 +2,7 @@ const src = require("debug");
 
 let productos = [
     {
+        id: 1,
         foto : '/images/products/air-force.jpg ' ,
         nombre: "Zapatillas Nike Air Force 1" ,
         marca: "Marca: Nike",
@@ -10,6 +11,7 @@ let productos = [
         comentario:" Comentarios : 12" ,
     },
     {
+        id: 2,
         foto : "/images/products/air-force-1-botas-wWrQ12.jpg" ,
         nombre: "Zapatillas Nike Air Force 1 Boots" ,
         marca: "Marca: Nike",
@@ -18,6 +20,7 @@ let productos = [
         comentario:" Comentarios : 120" ,
     },
     {
+        id: 3,
         foto : "/images/products/air-max-270.jpg",
         nombre: "Zapatillas Nike Air Max 270" ,
         marca : "Marca: Nike",
@@ -26,6 +29,7 @@ let productos = [
         comentario:" Comentarios : 520" ,
     },
     {
+        id: 4,
         foto : "/images/products/converse-PRINT.jpg",
         nombre: "Zapatillas Converse Plataforma " ,
         marca: "Marca: Converse",
@@ -34,6 +38,7 @@ let productos = [
         comentario:" Comentarios : 115" ,
     },
     {
+        id: 5,
         foto : "/images/products/forum-bold.jpg",
         nombre: "Zapatillas Adidas Forum Bold" ,
         marca : "Marca: Adidas",
@@ -42,6 +47,7 @@ let productos = [
         comentario:" Comentarios : 13" ,
     },
     {
+        id: 6,
         foto : "/images/products/jordan-air-1.jpg",
         nombre: "Zapatillas Nike Air Jordan 1" ,
         marca: "Marca: Nike",
@@ -50,6 +56,7 @@ let productos = [
         comentario:" Comentarios : 48" ,
     },
     {
+        id: 7,
         foto : "/images/products/jordan-11.jpg",
         nombre: "Zapatillas Nike Air Jordan 11" ,
         marca: "Marca: Nike",
@@ -58,6 +65,7 @@ let productos = [
         comentario:" Comentarios : 132" ,
     },
     {
+        id: 8,
         foto : "/images/products/puma-rs.jpg",
         nombre: "Zapatillas Puma RS- Fast" ,
         marca: "Marca: Puma",
@@ -66,6 +74,7 @@ let productos = [
         comentario:" Comentarios : 1212" ,
     },
     {
+        id: 9,
         foto : "/images/products/superstar.jpg",
         nombre: "Zapatillas Adidas Superstar" ,
         marca: "Marca: Adidas",
@@ -74,6 +83,7 @@ let productos = [
         comentario:" Comentarios : 112" ,
     },
     {
+        id: 10,
         foto :  "/images/products/vans.jpg",
         nombre: "Zapatillas Vans Old Skool" ,
         marca: "Marca: Vans",
@@ -82,6 +92,7 @@ let productos = [
         comentario:" Comentarios : 512" ,
     },
     {
+        id: 11,
         foto :  "/images/products/taylor-all-move.jpg",
         nombre: "Zapatillas Chuck Taylor All Star Move" ,
         marca : "Marca: Converse",
@@ -90,6 +101,7 @@ let productos = [
         comentario:" Comentarios : 712" ,
     },
     {
+        id: 12,
         foto : "/images/products/forum-mid.jpg",
         nombre: "Zapatillas Adidas Forum Mid" ,
         marca : "Marca: Adidas",

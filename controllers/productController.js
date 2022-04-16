@@ -1,6 +1,8 @@
 const req = require("express/lib/request");
 let usuarios = require("../db/usuarios");
-let comentarios = require('../db/comentarios')
+let comentarios = require('../db/comentarios');
+const productos = require("../db/productos");
+
 
 
 let productController = {
