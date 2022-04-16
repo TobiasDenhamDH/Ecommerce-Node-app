@@ -22,7 +22,8 @@
 			<!-- Show the "ultimos" products -->
 
 			<!-- Formulario de Registro -->
-
+	<main class="main-registro">
+		<div class="div-registro">
 			<form class="form-register" action="/users/login" method="get">
 				<div>
 					<label>Email:</label>
@@ -42,16 +43,20 @@
 				</div>
 				<div>
 					<label>Número de Documento:</label>
-					<input type="number" name="documento" value="" required>
+					<input type="text" name="documento" value="" required>
 				</div>
 				<div>
 					<label>Foto de Perfil:</label>
 					<input type="file" name="foto" value="" required>
 				</div>
+				<div class="terminos-registro">
+                    <label for="Terminos">Acepto terminos y condiciones</label>
+                    <input type="checkbox" name="Terminos" value="Acepto" >                 
+                </div>
 				<button type="submit">Enviar</button>
 			</form>
-
-
+		</div>
+	</main>
 			<!-- <h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario de registro. <br>
 			Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos <br>
 			Eliminen estás líneas y coloquen el formulario. <br>

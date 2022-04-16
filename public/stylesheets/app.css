@@ -68,7 +68,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background: linear-gradient(to right,#c8c6c6,#737171);
+  background-color: #c8c6c6;
 
 }
 
@@ -178,11 +178,11 @@ hr {
 
 .products-title {
   font-size: 2.4em;
-  font-weight: 400;
+  font-weight: 1500;
   color: var(--gray);
   display: inline-block;
   background-color: #e1dcdc;
-  color: #666666;
+  color: black;
   font-family: 'Raleway', sans-serif;
   max-width: 1110px;
   margin: auto;
@@ -467,7 +467,8 @@ hr {
   padding: 15px;
   border-radius: 8px;
   border: none;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .action-button {
@@ -516,34 +517,96 @@ hr {
 }
 
 /*====== Formularios ======*/
-.form-label {
+/* .form-label {
   display: inline-block;
   font-size: 1.6em;
   margin: 10px 0;
+} */
+ .main-registro{
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+  margin-top: 50px;
+} 
+.div-registro{
+  display: flex;
+  justify-content: center;
+  background-color:#c8c6c6;
+  padding: 5%;
+  color:white;
+  font-weight: 700;
+  text-align: left;
+  border-radius: 30px;
+  font-size: 25px;
+  max-width: 1000px;
+  margin: 4%;
 }
 
-.form-input {
-  display: block;
-  width: 100%;
-  height: 45px;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-  border-radius: 8px;
-  border: none;
-  border: solid 1px var(--gray);
-  padding: 0 15px;
+
+.form-register {
+  display: inline-block;
+  justify-content: center;
+  max-width: 100%;
+  padding: 30px 100px;
+  text-align: left;
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: var(--base-font-family);
+  border-style: solid;
+  border-width: 1px;
+  
 }
+/* .form-register input {
+  
+    display: block;
+    justify-content: flex-end; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border:none;
+    color: white;  
+    background-color: #007aff;
+   
+} */
 
 .error{
   color: rgb(209, 0, 0);
   font-size: 1.4em;
 }
+/* Estilos del formulario de registro */
 
-textarea.form-input {
+/* .form-register{
+  margin: 40px;
+  font-size: 15px;
+  font-family: var(--base-font-family);
+  padding: 20px;
+  border-style: solid;
+  border-width: 1px;
+  /* display: flex;
+  /* flex-direction: column; 
+} */ 
+
+.form-register div{
+  margin: 15px 0px ;
+}
+
+.form-register input:hover{
+    background-color:#e1dcdc;
+}
+
+  textarea.form-input {
   min-height: 140px;
   resize: vertical;
   padding: 15px;
+} 
+.terminos-registro {
+  display: flex;
+  flex-wrap: wrap;
+  
 }
+.terminos-registro label{
+  font-size: 15px;
+}
+
 
 /*====== Profile ======*/
 .info-usuario{
@@ -624,24 +687,4 @@ textarea.form-input {
   
 }
 
-/* Estilos del formulario de registro */
-
-.form-register{
-  margin: 40px;
-  font-size: 15px;
-  font-family: var(--base-font-family);
-  padding: 20px;
-  border-style: solid;
-  border-width: 1px;
-  /* display: flex;
-  flex-direction: column; */
-}
-
-.form-register div{
-  margin: 15px 0px ;
-}
-
-.form-register input:hover{
-    background-color:#c8c6c6;
-}
 
