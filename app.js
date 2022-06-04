@@ -1,6 +1,7 @@
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
+let session = require('express-session');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
