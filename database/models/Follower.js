@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         tableName: "followers",
         timestamps: true,
-        underscored: false
+        underscored: true
     };
     
     const Follower = sequelize.define(alias, cols, config);

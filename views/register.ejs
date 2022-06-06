@@ -25,36 +25,53 @@
 			<!-- Formulario de Registro -->
 			<main class="main-registro">
 				<div class="div-registro">
-					<form class="form-register" action="/users/login" method="get">
+					<form class="form-register" action="/users" method="POST" enctype="multipart/form-data">
+						<% if (locals.errors) { %>
+							<p class="error"><%= errors.message %>  </p>
+						<% } %>
+						<div>
+							<label>Nombre:</label>
+							<br>
+							<input type="text" name="name" value="" required>
+						</div>
+						<div>
+							<label>Apellido:</label>
+							<br>
+							<input type="text" name="surname" value="" required>
+						</div>
 						<div>
 							<label>Email:</label>
+							<br>
 							<input type="email" name="email" value="" required>
 						</div>
 						<div>
-							<label>Usuario:</label>
-							<input type="text" name="usuario" value="" required>
+							<label>Contraseña:</label>
+							<br>
+							<input type="password" name="password" value="" required>
 						</div>
 						<div>
-							<label>Contraseña:</label>
-							<input type="password" name="contraseña" value="" required>
+							<label>Reescribir contraseña:</label>
+							<input type="password" name="retypePassword" value="" required>
 						</div>
 						<div>
 							<label>Fecha de Nacimiento:</label>
-							<input type="date" name="fecha" value="" required>
+							<input type="date" name="birth_date" value="" required>
 						</div>
 						<div>
 							<label>Número de Documento:</label>
-							<input type="number" name="documento" value="" required>
+							<input type="number" name="document" value="" required>
 						</div>
 						<div>
 							<label>Foto de Perfil:</label>
-							<input type="file" name="foto" value="" required>
+							<input type="file" name="avatar" value="" required>
 						</div>
-						<div class="terminos-registro">
+						<!-- <div class="terminos-registro">
                	 		    <label for="Terminos">Acepto terminos y condiciones</label>
                			     <input type="checkbox" name="Terminos" value="Acepto" >                 
-              		    </div>
+              		    </div> -->
+						<div>
 						<button type="submit">Enviar</button>
+						</div>
 					</form>
 				</div>
 			</main>

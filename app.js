@@ -22,6 +22,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'moviesDb',
+  resave: false,
+  saveUninitialized: true
+
+}));
+
+// pasar datos de session a locals
+app.use(function(req,res,next){
+
+  res.locals.user = req.session.user
+
+  return next()
+})
+
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use("/products", productRouter);

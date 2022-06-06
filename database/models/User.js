@@ -27,12 +27,6 @@ module.exports = (sequelize, dataTypes) => {
         avatar:{
             type:dataTypes.STRING,
         },
-        products: {
-            type: dataTypes.INTEGER,
-        },
-        comments: {
-            type: dataTypes.INTEGER,
-        },
         followers_id: {
             type: dataTypes.INTEGER,
         },
@@ -49,7 +43,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         tableName: "users",
         timestamps: true,
-        underscored: false
+        underscored: true
     };
     
     const User = sequelize.define(alias, cols, config);

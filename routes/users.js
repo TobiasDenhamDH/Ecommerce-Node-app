@@ -18,7 +18,7 @@ let upload = multer({storage: storage});
 
 // registro de usuario
 router.get('/', userController.register);
-router.post('/', upload.single('avatar'), userController.store);
+router.post('/', upload.single('avatar'), userController.storeRegister);
 
 // login de usuario
 router.get('/login', userController.login);
