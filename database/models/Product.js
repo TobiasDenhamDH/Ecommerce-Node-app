@@ -15,10 +15,17 @@ module.exports = (sequelize, dataTypes) => {
         users_id: {
             type: dataTypes.INTEGER
         },
+        comments_id: {
+            type: dataTypes.INTEGER
+        },
         image:{
             type:dataTypes.STRING,
         },
         created_at: {
+            type:dataTypes.DATE,
+            allowNull: true,
+        },
+        updated_at: {
             type:dataTypes.DATE,
             allowNull: true,
         }

@@ -33,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
         comments: {
             type: dataTypes.INTEGER,
         },
-        followers: {
+        followers_id: {
             type: dataTypes.INTEGER,
         },
         created_at: {
