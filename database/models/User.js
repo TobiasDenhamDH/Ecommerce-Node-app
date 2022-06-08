@@ -37,6 +37,12 @@ module.exports = (sequelize, dataTypes) => {
         updated_at: {
             type:dataTypes.DATE,
             allowNull: true,
+        },
+        comments_id:{
+            type: dataTypes.INTEGER
+        },
+        products_id:{
+            type: dataTypes.INTEGER
         }
 
     };
@@ -48,5 +54,28 @@ module.exports = (sequelize, dataTypes) => {
     
     const User = sequelize.define(alias, cols, config);
     
+    User.associate = function(models){
+        User.belongsToMany(models.Follower,{
+            as: 'followers',
+            through: 'follower_user',
+            foreignKey:'users_id',
+            otherKey: 'followers_id',
+            timestamps: true
+        })
+    };
+
+    User.associate = function(models){
+        User.hasMany(models.Comment, {
+            as: 'comments',
+            foreignKey: 'comments_id'
+        }),
+        User.hasMany(models.Product,{
+            as:"users",
+            foreignKey: "products_id"
+        })
+    }
+
+   
+
     return User;
 }
