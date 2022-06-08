@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
     const Follower = sequelize.define(alias, cols, config);
     
     Follower.associate = function(models){
-        Follower.belongsToMany(models.Users,{
+        Follower.belongsToMany(models.User,{
             as: 'followers',
             through: 'FollowerUser',
             foreignKey:'followers_id',
