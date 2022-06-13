@@ -9,6 +9,7 @@ let mainRouter = require('./routes/main');
 let usersRouter = require('./routes/users');
 let productRouter = require('./routes/product');
 let searchRouter = require('./routes/search-result');
+const db = require('./database/models');
 
 let app = express();
 
@@ -41,7 +42,7 @@ app.use(function(req, res, next){
   //chequear que no tengamos usuario en sessión y si tengamos cookie
   if(req.session.user == undefined && req.cookies.userId !== undefined){
     //Buscar el usario de la base de datos
-       users.findByPk(req.cookies.userId)
+       db.User.findByPk(req.cookies.userId)
             .then( function(user){
               //Dentro del then pasar al usario a req.session.user
               //Pasar al usuario locals.user
