@@ -82,18 +82,19 @@ let userController = {
             // console.log(user)
             errors.message = "El usuario no existe"
             res.locals.errors = errors;
-            return res.render('main')
+            return res.render('login')
         } else if (bcrypt.compareSync(req.body.password,user.password) == false ) {
             errors.message = "La contraseña es incorrecta"
             res.locals.errors = errors;
-            return res.render('main')
+            return res.render('login')
         } else {
             req.session.user = user;
             return res.redirect('/')
         
-        .catch(error => console.log(error))
+        
         }
     })
+    .catch(error => console.log(error))
 
     },
     profile: function (req,res) {
