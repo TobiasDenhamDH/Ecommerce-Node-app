@@ -77,7 +77,7 @@ let userController = {
         //     password: bcrypt.hashSync(req.body.password, 10),
         // }
         let errors = {}
-        if (req.body.password != bcrypt.compareSync(bcrypt.hashSync(req.body.password, 10)) ) {
+        if (req.body.password !== bcrypt.compareSync(bcrypt.hashSync(req.body.password, 10)) ) {
             errors.message = "La contraseña es incorrecta"
             res.locals.errors = errors;
             return res.render('login')
@@ -86,12 +86,13 @@ let userController = {
             where: [{email: req.body.email}]
         })
         .then ( function (user){
-            if(user == null){
+            if(user === null){
             errors.message = "El email no esta registrado por favor elija otro"
             res.locals.errors = errors;
-            return res.render('register')
-        } else{
-            req.session.user = user
+            return res.render('login')
+        } else {
+            req.session.user = user;
+            return res.redirect('/')
         }
     })
     }

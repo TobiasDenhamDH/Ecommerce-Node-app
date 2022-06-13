@@ -24,7 +24,7 @@
 	<!--Formulario de login  -->
 				<main class="main-registro">
 					<div class="div-registro">
-						<form class="form-register" action="/users/profileedit" method="get">
+						<form class="form-register" action="/login" method="POST">
 							<% if (locals.errors) { %>
 								<p class="error"><%= errors.message %>  </p>
 							<% } %>
