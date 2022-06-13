@@ -21,6 +21,7 @@ router.get('/:id?', productController.index);
 
 // agregar nuevo producto
 router.get('/add/new', productController.add)
+//router.post('/store', productController.store)
 router.post('/add/new', upload.single('image'), productController.store);
 
 module.exports = router;

@@ -23,23 +23,23 @@
 			<!-- Formulario para agregar productos al catalogo -->
 			<main class="main-registro">
 				<div class="div-registro">
-					<form class="form-register" action="/" method="get">
+					<form class="form-register" action="/products/add/new" method="POST" enctype="multipart/form-data">
+						<% if (locals.errors) { %>
+							<p class="error"><%= errors.message %>  </p>
+						<% } %>
 						<div>
 							<label>Imagen:</label>
-							<input type="file" name="imagen" value="" required>
+							<input type="file" name="image" value="" required>
 						</div>
 						<div>
 							<label>Nombre del Producto:</label>
-							<input type="text" name="Nombre del Producto" value="" required>
+							<input type="text" name="name" value="" required>
 						</div>
 						<div>
 							<label>Descripcion:</label>
-							<input type="text" name="Descripcion" value="" required>
+							<input type="text" name="description" value="" required>
 						</div>
-						<div>
-							<label>Fecha de carga:</label>
-							<input type="date" name="Fecha de carga" value="" required>
-						</div>
+						
 						<button type="submit">Enviar</button>
 					</form>
 				</div>

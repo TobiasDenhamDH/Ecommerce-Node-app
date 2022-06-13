@@ -15,9 +15,9 @@ module.exports = (sequelize, dataTypes) => {
         users_id: {
             type: dataTypes.INTEGER
         },
-        comments_id: {
+/*         comments_id: {
             type: dataTypes.INTEGER
-        },
+        }, */
         image:{
             type:dataTypes.STRING,
         },
