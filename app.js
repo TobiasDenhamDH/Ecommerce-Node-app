@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-  secret: 'moviesDb',
+  secret: 'proyecto_integrador',
   resave: false,
   saveUninitialized: true
 
@@ -35,6 +35,27 @@ app.use(function(req,res,next){
   res.locals.user = req.session.user
 
   return next()
+})
+
+app.use(function(req, res, next){
+  //chequear que no tengamos usuario en sessión y si tengamos cookie
+  if(req.session.user == undefined && req.cookies.userId !== undefined){
+    //Buscar el usario de la base de datos
+       users.findByPk(req.cookies.userId)
+            .then( function(user){
+              //Dentro del then pasar al usario a req.session.user
+              //Pasar al usuario locals.user
+              // retornar next()
+                req.session.user = user
+                res.locals.user = user
+              
+                return next()
+
+            })
+            .catch( error => console.log(error))
+          } else { //tiene que haber un else
+            return next()
+          }
 })
 
 app.use('/', mainRouter);

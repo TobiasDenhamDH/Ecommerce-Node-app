@@ -22,6 +22,7 @@ router.post('/', upload.single('avatar'), userController.storeRegister);
 
 // login de usuario
 router.get('/login', userController.login);
+router.post('/login', userController.storeLogin);
 
 // perfil de usuario
 router.get('/profile', userController.profile);

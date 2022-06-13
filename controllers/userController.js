@@ -71,6 +71,32 @@ let userController = {
     login: function (req,res) {
         return res.render('login')
     },
+    storeLogin: function (req,res) {
+        // let user = {
+        //     email: req.body.email,
+        //     password: bcrypt.hashSync(req.body.password, 10),
+        // }
+        let errors = {}
+        if (req.body.password != bcrypt.compareSync(bcrypt.hashSync(req.body.password, 10)) ) {
+            errors.message = "La contraseña es incorrecta"
+            res.locals.errors = errors;
+            return res.render('login')
+        } else {
+        db.User.findOne({
+            where: [{email: req.body.email}]
+        })
+        .then ( function (user){
+            if(user == null){
+            errors.message = "El email no esta registrado por favor elija otro"
+            res.locals.errors = errors;
+            return res.render('register')
+        } else{
+            req.session.user = user
+        }
+    })
+    }
+
+    },
     profile: function (req,res) {
         return res.render('profile', {usuarios: usuarios, productos: productos})
         
