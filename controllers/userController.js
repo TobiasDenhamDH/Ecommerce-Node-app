@@ -69,7 +69,12 @@ let userController = {
             }
         },
     login: function (req,res) {
-        return res.render('login')
+        if (req.session.user == undefined) {
+            res.redirect('/users/register')
+        } else {
+            return res.render('login')
+        }
+        
     },
     storeLogin: function (req,res) {
         let errors = {}
