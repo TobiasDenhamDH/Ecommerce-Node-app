@@ -79,7 +79,6 @@ let userController = {
         })
         .then ( function (user){
             if(user == null) {
-            // console.log(user)
             errors.message = "El usuario no existe"
             res.locals.errors = errors;
             return res.render('login')
@@ -88,6 +87,9 @@ let userController = {
             res.locals.errors = errors;
             return res.render('login')
         } else {
+            if (req.body.recordarme !== undefined) {
+                res.cookie('userId', user, {maxAge: 1000*60*5} )
+            }
             req.session.user = user;
             return res.redirect('/')
         

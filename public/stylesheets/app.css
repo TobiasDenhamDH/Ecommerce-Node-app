@@ -560,13 +560,13 @@ hr {
   
     display: block;
     justify-content: flex-end; 
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border:none;
-    color: white;  
-    background-color: #007aff;
+    /* margin-top: 15px;
+    margin-bottom: 15px; */
+    /* max-width: 500px; */
+ 
+    /* background-color: #007aff; */
    
-} */
+ */
 
 .error{
   color: rgb(209, 0, 0);
