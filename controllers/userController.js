@@ -69,12 +69,7 @@ let userController = {
             }
         },
     login: function (req,res) {
-        if (req.session.user == undefined) {
-            res.redirect('/users/register')
-        } else {
-            return res.render('login')
-        }
-        
+        return res.render('login')
     },
     storeLogin: function (req,res) {
         let errors = {}
@@ -93,7 +88,7 @@ let userController = {
             return res.render('login')
         } else {
             if (req.body.recordarme !== undefined) {
-                res.cookie('userId', user, {maxAge: 1000*60*5} )
+                res.cookie('userId', user.id, {maxAge: 1000*60*5} )
             }
             req.session.user = user;
             return res.redirect('/')
@@ -104,6 +99,13 @@ let userController = {
     .catch(error => console.log(error))
 
     },
+
+    logout: function(req,res) {
+        req.session.destroy()
+        res.clearCookie('userId')
+        res.redirect('/')
+    },
+
     profile: function (req,res) {
         return res.render('profile', {usuarios: usuarios, productos: productos})
         

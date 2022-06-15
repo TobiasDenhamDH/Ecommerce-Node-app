@@ -8,7 +8,11 @@
 <body>
 	<!-- Header -->
 	<header class="main-header">
-		<%- include('./partials/header') %> 
+		<% if (user != null) { %>
+			<%- include('./partials/headerLogueado') %> 
+		<% } else { %>
+			<%- include('./partials/header') %> 
+		<% } %>
 	</header>
 	<!-- /Header -->
 	

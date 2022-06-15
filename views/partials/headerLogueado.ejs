@@ -35,23 +35,16 @@
 	
 				<ul class="right-navbar">
 					<li><a href="/users/profile">
-						  	<%= usuarios[0].nombre %> <i class="fas fa-user"></i>
+						<%= locals.user.surname %>, <%= locals.user.name %> <i class="fas fa-user"></i>
 						</a>
 					</li>
 					<li>
-						<form action="/" method="GET">
+						<form action="/users/logout" method="POST">
 							<button class="logout" type="submit">
 								Cerrar sesión <i class="fas fa-sign-in-alt"></i>
 							</button>
 						</form>
 					</li>
-					<!-- Solo deslogueado <li>
-						<a href="register.html">Creá tu cuenta <i class="far fa-address-card"></i>
-						</a>
-					</li>
-					<li>
-						<a href="login.html">Ingresá <i class="fas fa-sign-in-alt"></i></a>
-					</li> -->
 				</ul>
 			</nav>
 		</div>
