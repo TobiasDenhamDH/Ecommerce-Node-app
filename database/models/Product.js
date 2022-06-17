@@ -15,9 +15,9 @@ module.exports = (sequelize, dataTypes) => {
         users_id: {
             type: dataTypes.INTEGER
         },
-/*         comments_id: {
+        comments_id: {
             type: dataTypes.INTEGER
-        }, */
+        },
         image:{
             type:dataTypes.STRING,
         },
@@ -41,11 +41,11 @@ module.exports = (sequelize, dataTypes) => {
     
     Product.associate = function(models){
         Product.hasMany(models.Comment, {
-            as: 'products',
+            as: 'comments_products',
             foreignKey: 'comments_id'
         }),
         Product.belongsTo(models.User,{
-            as: "users",
+            as: "users_products",
             foreignKey: "users_id"
         })
     }
