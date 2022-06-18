@@ -16,12 +16,12 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="/images/avatars/<%= data.avatar %>" alt="foto de perfil" class="foto-perfil">
+				<img src="/images/avatars/<%= data.avatar %>" alt="foto de <% data.user %>>" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
 					<h1 class="main-title"> <%= data.name %>  <%= data.surname %>
-						<a href="/users/profileedit">
+						<a href="/users/profileedit/<%= data.id %>">
 							<i class="fas fa-cog"></i>
 						</a>
 					</h1>

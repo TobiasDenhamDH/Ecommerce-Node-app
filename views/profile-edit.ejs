@@ -24,30 +24,34 @@
 	<!--Formulario de edicion de datos de perfil  -->
 			<main class="main-registro">
 				<div class="div-registro">
-					<form class="form-register" action="/users/profile" method="get">
+					<form class="form-register" action="/users/profileedit/profileStore" method="POST" enctype="multipart/form-data">
 						<div>
-							<label> Cambiar Email:</label>
+							<label> Editar Nombre: </label>
+							<input type="text" name="name" value="">
+						</div>
+						<div>
+							<label> Editar Apellido:</label>
+							<input type="text" name="surname" value="">
+						</div>
+						<div>
+							<label>Editar Email:</label>
 							<input type="email" name="email" value="">
 						</div>
 						<div>
-							<label>Cambiar Usuario:</label>
-							<input type="text" name="usuario" value="">
+							<label>Editar Contraseña:</label>
+							<input type="text" name="password" value="">
 						</div>
 						<div>
-							<label>Cambiar Contraseña:</label>
-							<input type="password" name="contraseña" value="">
+							<label>Editar Fecha de Nacimiento:</label>
+							<input type="date" name="birth_date" value="">
 						</div>
 						<div>
-							<label>Cambiar Fecha de Nacimiento:</label>
-							<input type="date" name="fecha" value="">
-						</div>
-						<div>
-							<label>Cambiar Número de Documento:</label>
-							<input type="number" name="documento" value="">
+							<label>Editar Número de Documento:</label>
+							<input type="number" name="document" value="">
 						</div>
 						<div>
 							<label>Cambiar Foto de Perfil:</label>
-							<input type="file" name="foto" value="">
+							<input type="file" name="avatar" value="">
 						</div>
 						<button type="submit">Enviar</button>
 					</form>

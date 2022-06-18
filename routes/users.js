@@ -32,6 +32,7 @@ router.post('/logout', userController.logout);
 router.get('/profile/:id', userController.profile);
 
 // editar perfil de usuario
-router.get('/profileedit', userController.profileEdit);
+router.get('/profileedit/:id', userController.profileEdit);
+router.post('/profileedit/profileStore', upload.single('avatar'), userController.profileStore)
 
 module.exports = router;

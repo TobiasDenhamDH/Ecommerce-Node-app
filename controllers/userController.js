@@ -141,7 +141,66 @@ let userController = {
         
     },
     profileEdit: function (req,res) {
-        return res.render('profile-edit', {usuarios: usuarios})
+        const id = req.params.id
+
+        if(req.session.user){
+            if(id != req.session.user.id){
+                return res.redirect(`/users/profileedit/${req.session.user.id}`) /* Forma hacer que solo el duenio del perfil pueda editar sus datos */
+            }else{
+                db.User.findByPk(id, {
+                    include: [
+                        {association: 'products'},/* Relacion de productos con usuarios */
+                        {association: 'comments'} /* Relacion de productos con comentarios */
+                    ]
+                })
+                .then((data)=>{
+                    if (data == null) {
+                        return res.redirect('/')
+                    } else {
+                        return res.render('profile-edit.ejs', { data:data })
+                    }
+                })
+                .catch((err)=>{
+                    console.log(err)
+                })
+            }
+        }else{
+            res.redirect('/users/login')
+        }
+    },
+    profileStore: function(req,res){
+        const user = {
+            name: req.body.name,
+            surname: req.body.surname,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 12),
+            birth_date: req.body.birth_date,
+            document: req.body.document,
+            avatar: "",
+        }
+
+        if (req.file == undefined) {
+            user.avatar = req.session.user.avatar;
+        } else {
+            user.avatar = req.file.filename;
+        }
+
+        db.User.update(user, {
+                where: {
+                    id: req.session.user.id
+                }
+            })
+            .then(function(){
+                
+                user.id = req.session.user.id
+
+                req.session.user = user /* Probar sin esto o usando abajo el req.session.usser.id */
+
+                return res.redirect( `/users/profile/${user.id}` )
+            })
+            .catch(error => {
+                console.log(error)
+            }) 
     }
   }
   
