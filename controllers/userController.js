@@ -113,29 +113,31 @@ let userController = {
             include:[
                 {
                     association: 'comments',
-                    include:[{association:'users'}]
+                    include: {
+                        association: 'users'
+                    }
                 },
                 {
                     association: 'products',
-                    include:[{association:'comments'}]
+                    include: {
+                        association: "comments"
+                    }
                 },
                 {
-                    association: 'followers',
-                    include:[{association:'users'}]
+                    association: 'followers'
                 }
             ]
         })
-        .then(data => {
+        .then( (data) => {
             if (data == null) {
                 return res.redirect('/')
             } else {
-                return res.render('profile', {data: data})
+                return res.render('profile.ejs', { data:data })
             }
         })
-        .catch(error => {
-            console.log(error)
+        .catch((err)=>{
+            console.log(err)
         })
-        return res.render('profile', {usuarios: usuarios, productos: productos})
         
     },
     profileEdit: function (req,res) {

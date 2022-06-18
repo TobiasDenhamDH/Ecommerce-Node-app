@@ -30,11 +30,14 @@
 			<nav class="main-navbar">
 				<ul class="left-navbar">
 					<li><a href="/">Todos los productos</a></li>
+					<% if(locals.user){ %>
 					<li><a href="/products/add/new">Cargar productos</a></li>
+					<% } %>
 				</ul>
 	
 				<ul class="right-navbar">
-					<li><a href="/users/profile">
+					<% if(locals.user) { %>
+					<li><a href="/users/profile/<%= locals.user.id %> ">
 						<%= locals.user.surname %>, <%= locals.user.name %> <i class="fas fa-user"></i>
 						</a>
 					</li>
@@ -45,6 +48,15 @@
 							</button>
 						</form>
 					</li>
+					<% } else{ %>
+						<li>
+							<a href="/users">Creá tu cuenta <i class="far fa-address-card"></i>
+							</a>
+						</li>
+						<li>
+							<a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+						</li>
+					<% } %>
 				</ul>
 			</nav>
 		</div>
