@@ -20,11 +20,11 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src=" <%= usuarios[0].imagen %>" alt="foto de perfil" class="foto-perfil">
+				<img src=" <%= data.avatar %>" alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"> <%= usuarios[0].nombre %> 
+					<h1 class="main-title"> <%= data.name %>  <%= data.surname %>
 						<a href="/users/profileedit">
 							<i class="fas fa-cog"></i>
 						</a>
@@ -33,10 +33,10 @@
 				</div>
 				<div>
 					<ul class="datos">
-						<li> <%= usuarios[0].mail %> </li>
-						<li> <%= usuarios[0].productos %> </li>
-						<li> <%= usuarios[0].seguidores %> </li>
-						<li> <%= usuarios[0].comentarios %> </li>
+						<li> <%= data.email %> </li>
+						<li> <%= data.products.length %> </li>
+						<li> <%= data.followers.length %> </li>
+						<li> <%= data.comments.length %> </li>
 					</ul>
 				</div>
 			</div>

@@ -29,7 +29,7 @@ router.post('/logout', userController.logout);
 
 
 // perfil de usuario
-router.get('/profile', userController.profile);
+router.get('/profile/:id', userController.profile);
 
 // editar perfil de usuario
 router.get('/profileedit', userController.profileEdit);

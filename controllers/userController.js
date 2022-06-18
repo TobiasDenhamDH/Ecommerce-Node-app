@@ -107,6 +107,34 @@ let userController = {
     },
 
     profile: function (req,res) {
+        const id = req.params.id
+
+        db.User.findByPk(id,{
+            include:[
+                {
+                    association: 'comments',
+                    include:[{association:'users'}]
+                },
+                {
+                    association: 'products',
+                    include:[{association:'comments'}]
+                },
+                {
+                    association: 'followers',
+                    include:[{association:'users'}]
+                }
+            ]
+        })
+        .then(data => {
+            if (data == null) {
+                return res.redirect('/')
+            } else {
+                return res.render('profile', {data: data})
+            }
+        })
+        .catch(error => {
+            console.log(error)
+        })
         return res.render('profile', {usuarios: usuarios, productos: productos})
         
     },
