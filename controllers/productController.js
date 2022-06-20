@@ -79,32 +79,21 @@ let productController = {
     .then((data) => {
 
         if(req.session.user.id == data.users_id){
-         db.Comentario.destroy({
-             where: [
-                 {
-                     id : id
-                 }
-             ]
-         })
-
-     .then(() => {
-         db.Product.destroy({
-             where: [
-                 {
-                     id : id
-                 }
-             ]})
-     
-     })
-     .then(() => {
-         return res.redirect("/")
-     })
-     .catch(error => {
-         console.log(error)
-     })
-     } else{
-         return res.redirect("users/login")
-     }
+            db.Product.destroy({
+                where: [
+                    {
+                        id : id
+                    }
+                ]})
+                .then(() => {
+                   return res.redirect("/")
+                })
+                .catch(error => {
+                   console.log(error)
+                })
+        }else{
+            return res.redirect("users/login")
+        }
 
     })
     .catch(error => {
@@ -166,9 +155,48 @@ let productController = {
       }else{
           return res.redirect("/users/login")
       }
-   }
-  
-  
+   },
+   comment: function(req,res){
+        if(req.session.user){
+            let comment = {
+                users_id: req.session.user.id,
+                products_id: req.params.id,
+                text: req.body.text,
+            }
+
+        db.Comment.create(comment)
+        return res.redirect(`/products/${req.params.id}`)
+
+        }else{
+            return res.redirect('/users/login')
+        }
+   },
+   deleteComment: function(req, res){
+
+    let id = req.params.id
+
+    db.Comment.findByPk(id)
+
+    .then((data) => {
+       
+        db.Comment.destroy({
+            where: [
+                {
+                    id: id
+                }
+            ]
+        })
+        .then(() =>{
+            return res.redirect(`/products/${data.products_id}`)
+        })
+        .catch((err)=>{
+            console.log(err)
+          });
+   
+     }).catch((err)=>{
+        console.log(err)
+     })     
+}, 
   
   }
 

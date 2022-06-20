@@ -47,21 +47,30 @@
 					
 				</article>
 				<div class="col-12 col-lg-4">
-					<!-- <section class="comments">
+					<section class="comments">
 						
+						<% for(let i=0; i < data.comments.length ; i++ ){ %>
 							<article>
-							<img src="" alt="">
+							<img src="/images/users/<%= data.comments[i].users.avatar %>" alt=" Imagen de <%= data.comments[i].users.name %>">
 							<div class="data">
 								<p class="user">
-								<strong> <a href="/users/profile"> </a> </strong>
+								<strong> <a href="/users/profile/<%= data.comments[i].users.id %>"> <%= data.comments[i].users.name %> <%= data.comments[i].users.surname %></a>  </strong>
 								</p>
+								<p class="user"> <%= data.comments[i].text %> </p>
+								<% if(locals.user) { %>
+                                    <%if (locals.user.id == data.comments[i].users.id){ %> 
+                                    <form action="/products/delete-comment/<%= data.comments[i].id %>" method="POST">
+                                        <button class="btntrash fas fa-trash fa-2x" type="submit"></button>
+                                    </form>
+                                    <% } %>
+                                <% } %>
 							</div>
-						</article>
-						
+						    </article>
+						<% } %>
 
-					</section> -->
-					<form class="form" action="" method="GET">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+					</section>
+					<form class="form" action="/products/<%= data.id %>/comment" method="POST">
+						<input class="form-input" type="text"  name="text" value="" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
 					<hr>

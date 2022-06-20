@@ -21,6 +21,7 @@ router.get('/:id', productController.detail);
 
 // agregar nuevo producto
 router.get('/add/new', productController.add)
+
 //router.post('/store', productController.store)
 router.post('/add/new', upload.single('image'), productController.store);
 
@@ -30,5 +31,10 @@ router.post("/product-delete/:id", productController.delete);
 /* Editar producto */
 router.get("/product-edit/:id", productController.edit);
 router.post("/product-edit/:id/update", upload.single('image'), productController.update);
+
+/* Comentarios y borrar comentarios */
+
+router.post("/:id/comment", productController.comment);
+router.post("/delete-comment/:id", productController.deleteComment);
 
 module.exports = router;
