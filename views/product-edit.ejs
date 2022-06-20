@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+
+<head>
+	<%- include("./partials/head") %> 
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="main-header">
+		<%- include('./partials/headerLogueado') %>
+	</header>
+	<!-- /Header -->
+
+	<!-- Novedades -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">• Editar Producto •</h2>
+			</div>
+
+
+	<!--Formulario de edicion de producto  -->
+			<main class="main-registro">
+				<div class="div-registro">
+					<form class="form-register" action="/products/product-edit/<%= data.id %>/update" method="POST" enctype="multipart/form-data">
+						<div>
+							<label> Editar Nombre: </label>
+							<input type="text" name="name" value="" required>
+						</div>
+						<div>
+							<label> Editar descripcion:</label>
+							<input type="text" name="description" value="" required>
+						</div>
+						<div>
+							<label>Cambiar Foto del Producto:</label>
+							<input type="file" name="image" value="" required>
+						</div>
+						<button type="submit">Editar Producto</button>
+					</form>
+				</div>
+			</main>	
+
+
+		</div>	
+	</div>	
+
+	<!-- footer -->
+	<footer class="main-footer">
+		<%- include('./partials/footer') %> 
+	</footer>
+	<!-- /footer -->
+</body>
+
+</html>
