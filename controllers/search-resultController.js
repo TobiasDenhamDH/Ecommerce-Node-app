@@ -1,7 +1,7 @@
 let productos = require ("../db/productos");
 
 let db = require ("../database/models");
-let op = db.Sequelize.Op;
+let Op = db.Sequelize.Op;
 
 
 let searchController = {
@@ -29,24 +29,25 @@ let searchController = {
                 ['name', 'ASC']
             ],
             include: [  
-            { association: 'comments'},                           
-            { association: 'users' }
+              { association: 'users' },
+              { association: 'comments'}                           
+            
         ],
         })
           .then((data) => {
 
-            if(data == null){
-              errors.message = "No hay resultado para su criterio de busqueda";
-              res.locals.errors = errors ;
-              return res.render('search-results.ejs')
-            }else{
+            // if(data == null){
+            //   errors.message = "No hay resultado para su criterio de búsqueda";
+            //   res.locals.errors = errors ;
+            //   return res.render('search-results.ejs')
+            // }else{
               return res.render('search-results.ejs', {data:data})
-            }              
+            // }              
                     
                 
             })
             .catch((e) => {
-                console.log(e)
+              console.log(e)
             })
     }},
   }

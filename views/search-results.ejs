@@ -20,31 +20,32 @@
 				<h2 class="products-title">• Resultados de búsqueda • </h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<% if (locals.errors) { %>
-				<p class="error"><%= errors.message %>  </p>
-			<% } else{ %>
+			
 
-				<%= for(let i=0 ; i < data.length ; i++ ) %>
+				<% for (let i=0 ; i < data.length ; i++ ) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/products">
+						<a href="/products/<%=data[i].id%>">
 							<figure class="product-box_image">
-								<img src="/images/products/air-max-270.jpg" alt="">	  
+								<img src="/images/products/<%=data[i].image%>" alt="Imagen de <%=data[i].name %>">	  
 							</figure>
 						<article class="product-box_data">
-							<h3> Zapatillas Nike Air Max 270 </h3>
+						  <h3> <%=data[i].name %> </h3>
 							<div class="product-text">
-								<p>Marca: Nike</p>
-								<p>Color: Rosa</p>
-								<p> Talle: 38  </p>
-								<p> Comentarios : 520 </p>
+								<p><%= data[i].description %></p>
+								<a href="/users/profile/<%=data[i].users.id %>"><p> <%= data[i].users.name %> </p></a>
+								<p> <%= data[i].comments.length %> </p>
 							</div>
 						</article>
 						</a>
 					</section>
 				</div> 
 
-				<%=}%>
+				<%} %>
+					<% if (locals.errors) { %>
+						<p class="error"><%= errors.message %>  </p>
+			 		<% } %> 
+			
 					<!-- <div class="col-12 col-sm-6 col-lg-3">
 						<section class="product-box">
 							<a href="/products">
