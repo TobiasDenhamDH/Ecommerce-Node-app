@@ -12,7 +12,7 @@ let productController = {
     }, */
 
     add: function(req,res) {
-        return res.render('product-add', {usuarios: usuarios})
+        return res.render('product-add')
     },
 
     store: function(req,res) {

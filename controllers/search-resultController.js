@@ -5,9 +5,50 @@ let op = db.Sequelize.Op;
 
 
 let searchController = {
-    index: function(req,res) {
-      return res.render('search-results', {productos:productos})
-    }
+ 
+  index: function(req, res) {
+
+    let product = req.params.search;
+    let errors = {}
+
+    if(product == ""){
+    errors.message = "No completaste este campo";
+    res.locals.errors = errors ;
+    return res.render('search-results.ejs')
+   
+    }else {
+        db.Product.findAll({
+            where: {
+                [Op.or]:[
+                    {name: {[Op.like]: "%"+ product + "%", }},
+                    {description: {[Op.like]: "%" + product + "%", }},
+                    {users_id: {[Op.like]: "%" + product + "%", }},
+                ]
+                },
+            order: [
+                ['name', 'ASC']
+            ],
+            include: [  
+            { association: 'comments'},                           
+            { association: 'users' }
+        ],
+        })
+          .then((data) => {
+
+            if(data == null){
+              errors.message = "No hay resultado para su criterio de busqueda";
+              res.locals.errors = errors ;
+              return res.render('search-results.ejs')
+            }else{
+              return res.render('search-results.ejs', {data:data})
+            }              
+                    
+                
+            })
+            .catch((e) => {
+                console.log(e)
+            })
+    }},
   }
  
   module.exports = searchController;
