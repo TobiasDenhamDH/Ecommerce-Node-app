@@ -8,7 +8,7 @@ let searchController = {
  
   index: function(req, res) {
 
-    let product = req.params.search;
+    let product = req.query.search;
     let errors = {}
 
     if(product == ""){
@@ -31,24 +31,20 @@ let searchController = {
             include: [  
               { association: 'users' },
               { association: 'comments'}                           
-            
         ],
         })
           .then((data) => {
-
-            // if(data == null){
-            //   errors.message = "No hay resultado para su criterio de búsqueda";
-            //   res.locals.errors = errors ;
-            //   return res.render('search-results.ejs')
-            // }else{
-              return res.render('search-results.ejs', {data:data})
-            // }              
-                    
-                
+              if(data != null){
+                return res.render('search-results.ejs', {data:data})
+              }else{
+                errors.message = "los datos son incorrectos";
+                res.locals.errors = errors ;
+                return res.render('search-results.ejs')
+              }
             })
-            .catch((e) => {
+          .catch((e) => {
               console.log(e)
-            })
+          })
     }},
   }
  

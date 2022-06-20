@@ -115,6 +115,20 @@ hr {
   cursor: pointer;
 }
 
+.noresults{
+  font-size: 2.4em;
+  font-weight: 1500;
+  color: var(--gray);
+  display: inline-block;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  max-width: 1110px;
+  margin: 20px 20px;
+  width: 1000%;
+  padding: 0px 15px 0px 15px;
+  text-align: left;
+}
+
 
 /*====== Main Navbar ======*/
 .btn-toggle-navbar {
