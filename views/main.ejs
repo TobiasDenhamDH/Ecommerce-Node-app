@@ -39,7 +39,9 @@
 	<br>
 	<br>
 	<br>
-
+	<br>
+	<br>
+	<br>
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
@@ -51,14 +53,15 @@
 					<section class="product-box">
 						<a href="/products/<%= data[i].id %> ">
 							<figure class="product-box_image">
-							<img src="/images/products/<%= data[i].image %>" alt="Imagen de <%= data[i].name %> ">	  
-						</figure>
-						<article class="product-box_data">
-							<h2> <%= data[i].name %> </h2>
-							<p> Descripcion:<%= data[i].description %></p>
-							<a href="/users/profile/<%=data[i].users.id %>"><p> Usuario: <%= data[i].users.name %> </p></a>
-							<p> Comentarios: <%= data[i].comments.length %> </p>
-						</article>
+								<img src="/images/products/<%= data[i].image %>" alt="Imagen de <%= data[i].name %> " >	  
+							</figure>
+						    <article class="product-box_data">
+								<h2> <%= data[i].name %> </h2>
+								<p> Descripcion:<%= data[i].description %></p>
+								
+								<a href="/users/profile/<%=data[i].users.id %>"><p> Usuario: <%= data[i].users.name %> <%= data[i].users.surname %> </p></a>
+								<p> Comentarios: <%= data[i].comments.length %> </p>
+							</article>
 						</a>
 					</section>
 				</div>
@@ -81,14 +84,14 @@
 					<section class="product-box">
 						<a href="/products/<%= data[i].id %> ">
 							<figure class="product-box_image">
-							<img src="/images/products/<%= data[i].image %>" alt="Imagen de <%= data[i].name %> ">	  
-						</figure>
-						<article class="product-box_data">
-							<h2> <%= data[i].name %> </h2>
-							<p> Descripcion: <%= data[i].description %></p>
-							<a href="/users/profile/<%=data[i].users.id %>"><p> Usuario: <%= data[i].users.name %> </p></a>
-							<p> Comentario: <%= data[i].comments.length %> </p>
-						</article>
+								<img src="/images/products/<%= data[i].image %>" alt="Imagen de <%= data[i].name %> ">	  
+							</figure>
+							<article class="product-box_data">
+								<h2> <%= data[i].name %> </h2>
+								<p> Descripcion: <%= data[i].description %></p>
+								<a href="/users/profile/<%=data[i].users.id %>"><p> Usuario: <%= data[i].users.name %><%= data[i].users.surname %> </p></a>
+								<p> Comentario: <%= data[i].comments.length %> </p>
+							</article>
 						</a>
 					</section>
 				</div>

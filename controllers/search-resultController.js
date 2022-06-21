@@ -37,7 +37,7 @@ let searchController = {
               if(data != ''){
                 return res.render('search-results.ejs', {data:data})
               }else{
-                errors.message = "No hay resultados para su criterio de búsqueda";
+                errors.message = "Lo sentimos, no hay resultados para su criterio de búsqueda " ;
                 res.locals.errors = errors ;
                 return res.render('search-results.ejs')
               }

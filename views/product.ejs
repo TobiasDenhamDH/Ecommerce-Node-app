@@ -17,23 +17,17 @@
 	<% } else { %>
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title-detail"><%= data.name %></h2> 
-			<h3 class="product-detail-description">Usuario: <a href="/users/profile/<%= data.users.id %>"> <%=data.users.name %> <%=data.users.surname %>  </a></h3>
-				<% if (locals.user){ %> 
-					<% if (locals.user.id == data.users_id){ %> 
-						<div class="product-delete">
-							<a href="/products/product-edit/<%= data.id %> ">Editar</a>
-							<form action="/products/product-delete/<%= data.id %>" method="POST">
-								<button type="submit"> <i class="fas fa-trash"></i> </button>
-							</form>
-						</div>
-					<% } %>
-	             <% } %>
+			<section class="title-align">
+				<h2 class="products-title-detail">• <%= data.name %> •</h2> 
+				<h3 class="product-title-detailed"> Publicado por: <a href="/users/profile/<%= data.users.id %>"> <%=data.users.name %> <%=data.users.surname %> </a></h3>
+				<a class="img-detailed" href="/users/profile/<%= data.users.id %>"> <img src="/images/avatars/<%= data.users.avatar %>" alt=""></a>
+			</section>
+				
 		<% } %>
 		</div>
 		</div>
 		<div class="product-detail">
-			<div class="row">
+			<div class="rowrow">
 				<article class="col-12 col-lg-8 product-detail-info">
 
 					<img src="/images/products/<%= data.image %>" alt="" class="product-detail-img">
@@ -41,10 +35,21 @@
 					<h3 class="product-detail-description"><%= data.name %> </h3>
 						
 					<p class="product-detail-description"><%= data.description %></p>
-					<!-- <p class="product-detail-options"> Marca: Nike</p>
-					<p class="product-detail-options">Color: Rosa</p>
-					<p class="product-detail-options"> Talle: 38 </p>  -->
-					
+				 
+					<article class="logedit">
+					<% if (locals.user){ %> 
+						<% if (locals.user.id == data.users_id){ %> 
+							<div class="product-delete">
+								<form action="/products/product-edit/<%= data.id %> " >
+									<button type="submit"> Editar <i class="fa fa-pen"></i> </button>
+								</form>
+								<form action="/products/product-delete/<%= data.id %>" method="POST">
+									<button type="submit"> Eliminar <i class="fas fa-trash"></i> </button>
+								</form>
+							</div>
+						<% } %>
+					<% } %>
+					</article>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
@@ -60,7 +65,7 @@
 								<% if(locals.user) { %>
                                     <%if (locals.user.id == data.comments[i].users.id){ %> 
                                     <form action="/products/delete-comment/<%= data.comments[i].id %>" method="POST">
-                                        <button class="btntrash fas fa-trash fa-2x" type="submit"></button>
+										<button type="submit"> Eliminar <i class="fas fa-trash"></i> </button>
                                     </form>
                                     <% } %>
                                 <% } %>
