@@ -51,7 +51,7 @@
 						
 						<% for(let i=0; i < data.comments.length ; i++ ){ %>
 							<article>
-							<img src="/images/users/<%= data.comments[i].users.avatar %>" alt=" Imagen de <%= data.comments[i].users.name %>">
+							<img src="/images/avatars/<%= data.comments[i].users.avatar %>" alt=" Imagen de <%= data.comments[i].users.name %>">
 							<div class="data">
 								<p class="user">
 								<strong> <a href="/users/profile/<%= data.comments[i].users.id %>"> <%= data.comments[i].users.name %> <%= data.comments[i].users.surname %></a>  </strong>

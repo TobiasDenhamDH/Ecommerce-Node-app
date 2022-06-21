@@ -162,6 +162,7 @@ let productController = {
                 users_id: req.session.user.id,
                 products_id: req.params.id,
                 text: req.body.text,
+                avatar: req.session.user.avatar,
             }
 
         db.Comment.create(comment)

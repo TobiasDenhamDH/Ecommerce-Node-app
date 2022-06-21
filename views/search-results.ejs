@@ -34,9 +34,9 @@
 						<article class="product-box_data">
 						  <h3> <%=data[i].name %> </h3>
 							<div class="product-text">
-								<p><%= data[i].description %></p>
-								<a href="/users/profile/<%=data[i].users.id %>"><p> <%= data[i].users.name %> </p></a>
-								<p> <%= data[i].comments.length %> </p>
+								<p> Descripcion:<%= data[i].description %></p>
+								<a href="/users/profile/<%=data[i].users.id %>"><p> Usuario: <%= data[i].users.name %> <%= data[i].users.surname %> </p></a>
+								<p> Comentarios: <%= data[i].comments.length %> </p>
 							</div>
 						</article>
 						</a>

@@ -15,7 +15,6 @@ let searchController = {
     errors.message = "No completaste este campo";
     res.locals.errors = errors ;
     return res.render('search-results.ejs')
-   
     }else {
         db.Product.findAll({
             where: {
@@ -34,10 +33,11 @@ let searchController = {
         ],
         })
           .then((data) => {
-              if(data != null){
+            
+              if(data != ''){
                 return res.render('search-results.ejs', {data:data})
               }else{
-                errors.message = "los datos son incorrectos";
+                errors.message = "No hay resultados para su criterio de búsqueda";
                 res.locals.errors = errors ;
                 return res.render('search-results.ejs')
               }
