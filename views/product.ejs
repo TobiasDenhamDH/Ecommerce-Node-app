@@ -23,7 +23,7 @@
 		<div class="d-flex align-items-center">
 			<section class="title-align">
 				<h2 class="products-title-detail">• <%= data.name %> •</h2> 
-				<h3 class="product-title-detailed"> Publicado por: <a href="/users/profile/<%= data.users.id %>"> <%=data.users.name %> <%=data.users.surname %> </a></h3>
+				<h3 class="product-title-detailed"> Publicado por: <a class="hover" href="/users/profile/<%= data.users.id %>"> <%=data.users.name %> <%=data.users.surname %> </a></h3>
 				<a class="img-detailed" href="/users/profile/<%= data.users.id %>"> <img src="/images/avatars/<%= data.users.avatar %>" alt=""></a>
 			</section>
 				
@@ -63,7 +63,7 @@
 							<img src="/images/avatars/<%= data.comments[i].users.avatar %>" alt=" Imagen de <%= data.comments[i].users.name %>">
 							<div class="data">
 								<p class="user">
-								<strong> <a href="/users/profile/<%= data.comments[i].users.id %>"> <%= data.comments[i].users.name %> <%= data.comments[i].users.surname %></a>  </strong>
+								<strong> <a class="hover" href="/users/profile/<%= data.comments[i].users.id %>"> <%= data.comments[i].users.name %> <%= data.comments[i].users.surname %></a>  </strong>
 								</p>
 								<p class="user"> <%= data.comments[i].text %> </p>
 								<% if(locals.user) { %>
