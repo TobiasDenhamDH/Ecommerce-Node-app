@@ -57,9 +57,8 @@
 							</figure>
 						    <article class="product-box_data">
 								<h2> <%= data[i].name %> </h2>
-								<p> Descripcion:<%= data[i].description %></p>
-								
-								<a href="/users/profile/<%=data[i].users.id %>"><p> Usuario: <%= data[i].users.name %> <%= data[i].users.surname %> </p></a>
+								<p> Descripcion:<%= data[i].description %></p>								
+								<a href="/users/profile/<%=data[i].users.id %>"><p class="hover"> Usuario: <%= data[i].users.name %> <%= data[i].users.surname %> </p></a>
 								<p> Comentarios: <%= data[i].comments.length %> </p>
 							</article>
 						</a>
@@ -89,7 +88,7 @@
 							<article class="product-box_data">
 								<h2> <%= data[i].name %> </h2>
 								<p> Descripcion: <%= data[i].description %></p>
-								<a href="/users/profile/<%=data[i].users.id %>"><p> Usuario: <%= data[i].users.name %><%= data[i].users.surname %> </p></a>
+								<a href="/users/profile/<%=data[i].users.id %>"><p class="hover"> Usuario: <%= data[i].users.name %><%= data[i].users.surname %> </p></a>
 								<p> Comentario: <%= data[i].comments.length %> </p>
 							</article>
 						</a>

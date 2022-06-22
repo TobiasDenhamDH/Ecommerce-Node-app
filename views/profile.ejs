@@ -21,11 +21,13 @@
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
 					<h1 class="main-title"> <%= data.name %>  <%= data.surname %>
+						<% if(locals.user.id == data.id){ %>
 						<a href="/users/profileedit/<%= data.id %>">
-							<i class="fas fa-cog"></i>
+							<i id="hover2" class="fas fa-cog"></i>
 						</a>
+						<% } %>
 					</h1>
-					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
+					<a id="hover3" class="btn mt-3 ml-4" href="">SEGUIR</a>
 				</div>
 				<div>
 					<ul class="datos">
@@ -58,6 +60,7 @@
 						<article class="product-box_data">
 							<h2> <%= data.products[i].name %> </h2>
 							<p>Descripción: <%= data.products[i].description %> </p>
+							<a href="/users/profile/<%= data.id %>"><p class="hover"> Usuario: <%= data.name %> <%= data.surname %> </p></a>
 							<p>Comentarios: <%= data.products[i].comments.length %> </p>
 						</article>
 						</a>

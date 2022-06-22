@@ -807,6 +807,19 @@ margin-left: 65%;
     margin: auto;
   }
   
+/* Detalle dinamico */
+
+  .hover:hover{
+      color: black;
+  }
+
+  #hover2:hover{
+    color:  #666666;
+  }
+
+  #hover3:hover{
+    background-color:#666666
+  }
 }
 
 
