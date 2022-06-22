@@ -27,9 +27,6 @@ module.exports = (sequelize, dataTypes) => {
         avatar:{
             type:dataTypes.STRING,
         },
-        followers_id: {
-            type: dataTypes.INTEGER,
-        },
         created_at: {
             type:dataTypes.DATE,
             allowNull: true,
@@ -37,12 +34,6 @@ module.exports = (sequelize, dataTypes) => {
         updated_at: {
             type:dataTypes.DATE,
             allowNull: true,
-        },
-        comments_id:{
-            type: dataTypes.INTEGER
-        },
-        products_id:{
-            type: dataTypes.INTEGER
         }
 
     };
@@ -67,6 +58,10 @@ module.exports = (sequelize, dataTypes) => {
         User.hasMany(models.Follower,{
             as:"followers",
             foreignKey: "users_id"
+        })
+        User.hasMany(models.Follower,{
+            as:"followed",
+            foreignKey: "followed_id"
         })
     }
 

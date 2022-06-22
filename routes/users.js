@@ -35,4 +35,8 @@ router.get('/profile/:id', userController.profile);
 router.get('/profileedit/:id', userController.profileEdit);
 router.post('/profileedit', upload.single('avatar'), userController.profileStore)
 
+/* Seguir a un usuario */
+router.post('/profile/follower/:id', userController.profileFollowerStore)
+router.get('/profile/follower/:id', userController.profileFollower)
+
 module.exports = router;

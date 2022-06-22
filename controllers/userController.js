@@ -123,9 +123,10 @@ let userController = {
                         association: "comments"
                     }
                 },
-                {
-                    association: 'followers'
-                }
+                /* {
+                    association: 'followers',
+                    association: 'followed'
+                } */
             ],
             order:  [ ['products', "created_at", "DESC" ] ]
         })
@@ -202,7 +203,46 @@ let userController = {
             .catch(error => {
                 console.log(error)
             }) 
+    },
+    profileFollowerStore: function(req,res){
+      
+        if(req.session.user){
+            
+            let follow = {
+            users_id: req.session.user.id,
+            followed_id: req.params.id
+            }
+
+        db.Follower.create(follow)
+        return res.redirect(`/users/profile/${req.params.id}`)
+
+        
+        }else{
+            return res.redirect('/users/login')
+        }
+        
+    },
+    profileFollower: function(req,res){
+
+        db.Follower.findAll({
+            where: {
+                followed_id : req.params.id
+            },
+            include: [
+                {association: 'followers'},
+                {association: 'followed'} 
+            ]
+        })
+        .then((data)=>{
+            return res.render('profile',{ followdata : data})
+        })
+        .catch(error => {
+            console.log(error)
+        }) 
+
     }
+    
+    
   }
   
   module.exports = userController;

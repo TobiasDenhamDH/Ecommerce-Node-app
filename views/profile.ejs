@@ -33,13 +33,15 @@
 							<% } %>
 						<% } %>
 					</h1>
-					<a id="hover3" class="btn mt-3 ml-4" href="">SEGUIR</a>
+					<form action="/users/profile/follower/<%= data.id %>" method="POST">
+						<button type="submit" class="buy-now-button">SEGUIR</button>
+					</form>
 				</div>
 				<div>
 					<ul class="datos">
 						<li>Correo: <%= data.email %> </li>
 						<li>Productos: <%= data.products.length %> </li>
-						<li>Seguidores: <%= data.followers.length %> </li>
+						<li>Seguidores:  </li>
 						<li>Comentarios: <%= data.comments.length %> </li>
 					</ul>
 				</div>

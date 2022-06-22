@@ -6,9 +6,11 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             type: dataTypes.INTEGER
         }, 
-        
+        followed_id:{
+            type: dataTypes.INTEGER
+        },
         users_id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
         }
 
     };
@@ -24,6 +26,10 @@ module.exports = (sequelize, dataTypes) => {
         Follower.belongsTo(models.User,{
             as: 'users',
             foreignKey:'users_id',
+        }),
+        Follower.belongsTo(models.User,{
+            as: 'usersFollowed',
+            foreignKey:'followed_id',
         })
     }
 
