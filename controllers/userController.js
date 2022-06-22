@@ -126,7 +126,8 @@ let userController = {
                 {
                     association: 'followers'
                 }
-            ]
+            ],
+            order:  [ ['products', "created_at", "DESC" ] ]
         })
         .then( (data) => {
             if (data == null) {
