@@ -33,6 +33,6 @@ router.get('/profile/:id', userController.profile);
 
 // editar perfil de usuario
 router.get('/profileedit/:id', userController.profileEdit);
-router.post('/profileedit/profileStore', upload.single('avatar'), userController.profileStore)
+router.post('/profileedit', upload.single('avatar'), userController.profileStore)
 
 module.exports = router;

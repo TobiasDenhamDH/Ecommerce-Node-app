@@ -24,34 +24,34 @@
 	<!--Formulario de edicion de datos de perfil  -->
 			<main class="main-registro">
 				<div class="div-registro">
-					<form class="form-register" action="/users/profileedit/profileStore" method="POST" enctype="multipart/form-data">
+					<form class="form-register" action="/users/profileedit" method="POST" enctype="multipart/form-data">
 						<div>
 							<label> Editar Nombre: </label>
-							<input type="text" name="name" value="">
+							<input type="text" name="name" value="<%= data.name %>">
 						</div>
 						<div>
 							<label> Editar Apellido:</label>
-							<input type="text" name="surname" value="">
+							<input type="text" name="surname" value="<%= data.surname %>">
 						</div>
 						<div>
 							<label>Editar Email:</label>
-							<input type="email" name="email" value="">
+							<input type="email" name="email" value="<%= data.email %>">
 						</div>
 						<div>
-							<label>Editar Contraseña:</label>
-							<input type="text" name="password" value="">
+							<label>Nueva Contraseña:</label>
+							<input type="password" name="password" value="" minlength= "3" required>
 						</div>
 						<div>
 							<label>Editar Fecha de Nacimiento:</label>
-							<input type="date" name="birth_date" value="">
+							<input type="date" name="birth_date" value="<%= data.birth_date %>">
 						</div>
 						<div>
 							<label>Editar Número de Documento:</label>
-							<input type="number" name="document" value="">
+							<input type="number" name="document" value="<%= data.document %>">
 						</div>
 						<div>
 							<label>Cambiar Foto de Perfil:</label>
-							<input type="file" name="avatar" value="">
+							<input type="file" name="avatar" value="<%= data.avatar %>">
 						</div>
 						<button type="submit">Enviar</button>
 					</form>

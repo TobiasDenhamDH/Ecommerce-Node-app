@@ -27,15 +27,15 @@
 					<form class="form-register" action="/products/product-edit/<%= data.id %>/update" method="POST" enctype="multipart/form-data">
 						<div>
 							<label> Editar Nombre: </label>
-							<input type="text" name="name" value="" required>
+							<input type="text" name="name" value="<%= data.name %>" required>
 						</div>
 						<div>
 							<label> Editar descripcion:</label>
-							<input type="text" name="description" value="" required>
+							<input type="text" name="description" value="<%= data.description %>" required>
 						</div>
 						<div>
 							<label>Cambiar Foto del Producto:</label>
-							<input type="file" name="image" value="" required>
+							<input type="file" name="image" value="<%= data.avatar %>" required>
 						</div>
 						
 						<button type="submit">Editar Producto</button>

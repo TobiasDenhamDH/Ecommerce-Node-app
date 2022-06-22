@@ -88,7 +88,7 @@ let userController = {
             return res.render('login')
         } else {
             if (req.body.recordarme !== undefined) {
-                res.cookie('userId', user.id, {maxAge: 1000*60*5} )
+                res.cookie('userId', user.id, {maxAge: 1000*60*10} )
             }
             req.session.user = user;
             return res.redirect('/')
