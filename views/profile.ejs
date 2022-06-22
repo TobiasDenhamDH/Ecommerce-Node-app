@@ -16,15 +16,17 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="/images/avatars/<%= data.avatar %>" alt="foto de <% data.user %>>" class="foto-perfil">
+				<img src="/images/avatars/<%= data.avatar %>" alt="foto de <%= data.user %>>" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
 					<h1 class="main-title"> <%= data.name %>  <%= data.surname %>
-						<% if(locals.user.id == data.id){ %>
-						<a href="/users/profileedit/<%= data.id %>">
+						<% if (locals.user){ %>
+							<% if(locals.user.id == data.id ){ %>
+							<a href="/users/profileedit/<%= data.id %>">
 							<i id="hover2" class="fas fa-cog"></i>
-						</a>
+							</a>
+							<% } %>
 						<% } %>
 					</h1>
 					<a id="hover3" class="btn mt-3 ml-4" href="">SEGUIR</a>

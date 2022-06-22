@@ -132,7 +132,7 @@ let userController = {
             if (data == null) {
                 return res.redirect('/')
             } else {
-                return res.render('profile.ejs', { data:data })
+                return res.render('profile', { data:data })
             }
         })
         .catch((err)=>{
@@ -157,7 +157,7 @@ let userController = {
                     if (data == null) {
                         return res.redirect('/')
                     } else {
-                        return res.render('profile-edit.ejs', { data:data })
+                        return res.render('profile-edit', { data:data })
                     }
                 })
                 .catch((err)=>{

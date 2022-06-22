@@ -159,19 +159,19 @@ let productController = {
    comment: function(req,res){
         if(req.session.user){
             let comment = {
-                users_id: req.session.user.id,
-                products_id: req.params.id,
-                text: req.body.text,
-                avatar: req.session.user.avatar,
-            }
-
-        db.Comment.create(comment)
-        return res.redirect(`/products/${req.params.id}`)
-
-        }else{
-            return res.redirect('/users/login')
+            users_id: req.session.user.id,
+            products_id: req.params.id,
+            text: req.body.text,
+            avatar: req.session.user.avatar,
         }
-   },
+
+    db.Comment.create(comment)
+    return res.redirect(`/products/${req.params.id}`)
+
+    }else{
+        return res.redirect('/users/login')
+    }
+    },
    deleteComment: function(req, res){
 
     let id = req.params.id
