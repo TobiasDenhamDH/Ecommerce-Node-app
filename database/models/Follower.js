@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey:'users_id',
         }),
         Follower.belongsTo(models.User,{
-            as: 'usersFollowed',
+            as: 'followed',
             foreignKey:'followed_id',
         })
     }

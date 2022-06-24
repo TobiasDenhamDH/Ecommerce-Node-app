@@ -1,5 +1,5 @@
 let db = require ("../database/models");
-let op = db.Sequelize.Op;
+let Op = db.Sequelize.Op;
 let bcrypt = require('bcrypt');
 
 let userController = {
@@ -120,10 +120,10 @@ let userController = {
                         association: "comments"
                     }
                 },
-                /* {
+                {
                     association: 'followers',
                     association: 'followed'
-                } */
+                }
             ],
             order:  [ ['products', "created_at", "DESC" ] ]
         })
@@ -193,7 +193,7 @@ let userController = {
                 
                 user.id = req.session.user.id
 
-                req.session.user = user /* Probar sin esto o usando abajo el req.session.usser.id */
+                req.session.user = user 
 
                 return res.redirect( `/users/profile/${user.id}` )
             })
@@ -201,44 +201,47 @@ let userController = {
                 console.log(error)
             }) 
     },
-    profileFollowerStore: function(req,res){
-      
-        if(req.session.user){
-            
-            let follow = {
-            users_id: req.session.user.id,
-            followed_id: req.params.id
-            }
-
-        db.Follower.create(follow)
-        return res.redirect(`/users/profile/${req.params.id}`)
-
-        
-        }else{
-            return res.redirect('/users/login')
-        }
-        
-    },
-    profileFollower: function(req,res){
-
-        db.Follower.findAll({
-            where: {
-                followed_id : req.params.id
-            },
-            include: [
-                {association: 'followers'},
-                {association: 'followed'} 
-            ]
-        })
-        .then((data)=>{
-            return res.render('profile',{ followdata : data})
-        })
-        .catch(error => {
-            console.log(error)
-        }) 
-
-    }
     
+    follow: function(req,res){
+        let followed = req.params.id; 
+
+      db.Follower.findAll({ 
+            where: [{ followed_id : followed }] 
+        })
+        .then((data) => {
+          
+            let result = [] 
+
+          for (let i = 0 ; i < data.length; i++) { 
+            if(data[i].users_id == req.session.user.id) {
+              result.push(true) 
+            } 
+          }
+          if (result.length > 0) {
+           
+            db.Follower.destroy({
+              where: {
+                [Op.and]: [
+                  { followed_id : followed },
+                  { users_id: req.session.user.id },
+                ],
+              },
+            });
+          } else {
+
+            let user = {
+                followed_id: followed,
+                users_id: req.session.user.id,
+              }
+            
+            db.Follower.create(user);
+          }
+          res.redirect( `/users/profile/ ${followed}`);
+        })
+        .catch((e) => {
+          console.error(e);
+        })
+    },
     
   }
   

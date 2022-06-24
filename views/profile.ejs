@@ -33,15 +33,28 @@
 							<% } %>
 						<% } %>
 					</h1>
-					<form action="/users/profile/follower/<%= data.id %>" method="POST">
-						<button type="submit" class="follow-button">SEGUIR</button>
-					</form>
-				</div>
+						<% if(locals.user) { 
+							
+							if(data.id != locals.user.id) {
+							let validacion = 'false';
+							for (let i = 0; i < data.followed.length; i++) { 
+								if(data.followed[i].users_id == locals.user.id) { 
+									validacion = 'true';
+								}
+							}
+							if(validacion == 'true') { %>
+								<a href='/users/profile/follower/<%= data.id %>' class="btn mt-3 ml-4">Dejar de seguir</a>
+						<% } else { %>
+								<a href='/users/profile/follower/<%= data.id %>' class="btn mt-3 ml-4">Seguir</a>
+						<% }}} else{ %>
+							<a href='/users/login' class="btn mt-3 ml-4">Seguir</a>
+							<% } %>
+			</div>
 				<div>
 					<ul class="datos">
 						<li>Correo: <%= data.email %> </li>
 						<li>Productos: <%= data.products.length %> </li>
-						<li>Seguidores:  </li>
+						<li>Seguidores: <%= data.followed.length %> </li>
 						<li>Comentarios: <%= data.comments.length %> </li>
 					</ul>
 				</div>

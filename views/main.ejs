@@ -52,7 +52,7 @@
 				<h2 class="products-title">• Novedades •</h2>
 			</div>
 			<!-- Show the "ultimos" products -->			
-			<% for (let i=0; i < 4 ; i ++) { %> 	
+			<% for (let i=0; i < data.length ; i ++) { %> 	
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
 						<a href="/products/<%= data[i].id %> ">
@@ -82,7 +82,7 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			
-			<% for (let i=4; i < data.length ; i ++) { %> 	
+			<% for (let i=0; i < data.length ; i ++) { %> 	
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
 						<a href="/products/<%= data[i].id %> ">
