@@ -1,5 +1,3 @@
-let productos = require ("../db/productos");
-
 let db = require ("../database/models");
 let Op = db.Sequelize.Op;
 

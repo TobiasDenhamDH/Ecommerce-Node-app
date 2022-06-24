@@ -1,7 +1,3 @@
-const req = require("express/lib/request");
-let usuarios = require("../db/usuarios");
-let comentarios = require('../db/comentarios'); 
-
 let db = require ("../database/models");
 let op = db.Sequelize.Op;
 

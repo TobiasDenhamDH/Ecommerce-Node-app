@@ -556,6 +556,17 @@ hr {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+.follow-button {
+  background-color: var(--light-blue);
+  font-size: 1.2em;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
 .action-button {
   border: none;
@@ -665,8 +676,8 @@ margin-left: 65%;
     /* max-width: 500px; */
  
     /* background-color: #007aff; */
-   
- */
+    */
+
 
 .error{
   color: rgb(209, 0, 0);
@@ -693,6 +704,12 @@ margin-left: 65%;
     background-color:#e1dcdc;
 }
 
+.form-register input{
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
   textarea.form-input {
   min-height: 140px;
   resize: vertical;
@@ -707,6 +724,15 @@ margin-left: 65%;
   font-size: 15px;
 }
 
+.boton {
+  background-color: var(--light-blue);
+  font-size: 15px;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  
+}
 
 /*====== Profile ======*/
 .info-usuario{
