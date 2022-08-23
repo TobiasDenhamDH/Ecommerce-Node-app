@@ -14,10 +14,10 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "279012",
+    "password": "tanquesiri1",
+    "database": "tobiadenham_pruebadeploy",
+    "host": "mysql-tobiadenham.alwaysdata.net",
     "dialect": "mysql"
   }
 }
